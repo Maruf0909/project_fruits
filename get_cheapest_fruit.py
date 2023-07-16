@@ -15,15 +15,15 @@ def get_cheapest_fruit(data: str) -> str:
     f = open(data, 'r')
     reader=csv.reader(f)
     fruits=list(reader)
-    most_expensive=fruits[1]
+    cheapest =fruits[1]
     for fruit in fruits[2:]:
-        if float(fruit[1])<float(most_expensive[1]):
-            most_expensive=fruit
+        if float(fruit[1])<float(cheapest [1]):
+            cheapest =fruit
 
     f.close()
 
 
-    return most_expensive[0] 
+    return cheapest [0] 
 data='fruits.csv'
 pprint(get_cheapest_fruit(data))
 
