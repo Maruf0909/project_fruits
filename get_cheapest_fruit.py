@@ -23,7 +23,7 @@ def get_cheapest_fruit(data: str) -> str:
     f.close()
 
 
-    return cheapest [0] 
+    return cheapest.index #[0] 
 data='fruits.csv'
 pprint(get_cheapest_fruit(data))
 
