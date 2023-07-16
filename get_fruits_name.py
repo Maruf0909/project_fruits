@@ -1,3 +1,7 @@
+import csv
+import pprint
+
+
 def get_frutis_name(data:str)->list:
     """
     This function returns the names of the fruits
@@ -7,6 +11,17 @@ def get_frutis_name(data:str)->list:
     returns:
         list: list of fruits names
     """
-    return
+    f=open(data, 'r')
+    reader=csv.reader(f)
+    s=[]
+    for row in list(reader)[1:]:
+        name=row[0]
+        s.append(name)
+    return s
+
+x='fruits.csv'
+s=get_frutis_name(x)
+print(s)
+pprint.pprint(s)
 
     
